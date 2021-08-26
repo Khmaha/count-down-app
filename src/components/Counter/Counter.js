@@ -6,7 +6,6 @@ const Counter = ({ counter }) => {
     useEffect(() => {
         let cardSecondsEl = document.querySelector('.seconds')
         if (cardSecondsEl) {
-            console.log("cardSecondsEl", cardSecondsEl)
             if (cardSecondsEl.classList.contains('animate')) {
                 cardSecondsEl.classList.remove('animate')
             } else {
@@ -17,7 +16,6 @@ const Counter = ({ counter }) => {
     useEffect(() => {
         let cardMinutesEl = document.querySelector('.minutes')
         if (cardMinutesEl) {
-            console.log("cardMinutesEl", cardMinutesEl)
             cardMinutesEl.classList.add('animate')
             setTimeout(() => {
                 cardMinutesEl.classList.remove('animate')
@@ -27,7 +25,6 @@ const Counter = ({ counter }) => {
     useEffect(() => {
         let cardHoursEl = document.querySelector('.hours')
         if (cardHoursEl) {
-            console.log("cardHoursEl", cardHoursEl)
             cardHoursEl.classList.add('animate')
             setTimeout(() => {
                 cardHoursEl.classList.remove('animate')
@@ -38,7 +35,6 @@ const Counter = ({ counter }) => {
     useEffect(() => {
         let cardDaysEl = document.querySelector('.days')
         if (cardDaysEl) {
-            console.log("cardDaysEl", cardDaysEl)
             cardDaysEl.classList.add('animate')
             setTimeout(() => {
                 cardDaysEl.classList.remove('animate')
