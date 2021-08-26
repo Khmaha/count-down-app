@@ -1,0 +1,22 @@
+.SocialMedia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    bottom: 1em;
+    height: 10%;
+    z-index: 3;
+    &__icon{
+        font-size: 1.2em;
+        margin: 1em;
+        cursor: pointer;
+        &:hover{
+            &:before{
+                color:var(--counter-color) !important
+            }
+        }
+        
+    }
+}

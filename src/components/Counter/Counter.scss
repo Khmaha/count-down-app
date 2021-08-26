@@ -1,0 +1,137 @@
+@import '../../assets/scss/mixins.scss';
+.Counter-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation-duration: 2s;
+    animation-name: slideIn;
+    font-family: 'RedHatText';
+    @keyframes slideIn {
+        from {
+          margin-top: 100%;
+        }
+      
+        to {
+          margin-top: 0%;
+          width: 100%;
+        }
+    } 
+    &__title{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        color: var(--title-color);
+        font-weight: 700;
+        position: absolute;
+        font-family: 'RedHatText';
+        top: 2em;
+        text-align: center;
+        letter-spacing: 10px;
+        @media screen and (max-width: 480px){
+            top:0.5em;
+        }
+    }
+    &__timer{
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        font-family: 'RedHatText';
+        @media screen and (max-width: 768px) and (min-width:480px){
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 0px;
+        }
+        @media screen and (max-width: 480px){
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 30px;
+        }
+        &-block{
+            background: var(--blue-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4em;
+            color: var(--counter-color);
+            padding: 10px 0em;
+            font-weight: 700;
+            position: relative;
+            font-family: 'RedHatText';
+            width: 150px;
+            @media screen and (max-width: 480px){
+                width: 125px;
+            }
+           
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 45%;
+                transform: rotate 10deg;
+                width: 5%;
+                height: 10%;
+                background: hsl(235, 16%, 14%);
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 45%;
+                transform: rotate 10deg;
+                width: 5%;
+                height: 10%;
+                background: hsl(235, 16%, 14%);
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+              }
+            
+            &--value{
+                height: 50%;
+                width: 100%;
+                position: absolute;
+                &.top{
+                   top: 0;  
+                   opacity: 0.5;
+                   background: var(--very-dark-color);
+                   transform: rotateX(0deg);
+                    &.animate{
+                    transform-origin:bottom;
+                    transition: transform 0.8s linear ;
+                    transform-style: preserve-3d;
+                    transform: rotateX(-180deg) ;
+                    }
+               
+                }
+                &.bottom{
+                    bottom: 0;  
+                 }
+               
+            }
+        }
+       
+        &--title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            text-transform: uppercase;
+            padding: 20px 0;
+            padding-bottom: 0;
+            font-weight: 700;
+            font-family: 'RedHatText';
+            color: var(--text-color);
+            letter-spacing: 5px;
+        }
+    }
+}

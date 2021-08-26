@@ -1,0 +1,20 @@
+#root{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( to bottom, var(--very-dark-color ), var(--dark-color), var(--blue-color));
+    z-index: 1;
+
+}
+.App{
+    height: 100vh;
+    width: 100%;
+    color: var(--title-color);
+    z-index: 2;
+    background-image:  url("./assets/images/bg-stars.svg"), url("./assets/images/pattern-hills.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
